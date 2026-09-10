@@ -14,7 +14,9 @@
 
 # … except:
 !/.gitignore
+!/.nojekyll
 !/README.md
+!/index.html
 !/_knowledge/
 !/html/
 !/pdf/

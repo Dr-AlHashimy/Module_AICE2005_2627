@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AICE2005 — Systematic Design</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #1a1d21;
+    --muted: #5a6470;
+    --border: #e2e6ea;
+    --accent: #005c84;
+    --accent-text: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --surface: #1d2125;
+      --text: #e8eaed;
+      --muted: #9aa4b0;
+      --border: #2c3237;
+      --accent: #4aa3c9;
+      --accent-text: #0b1114;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 20px; margin-bottom: 32px; }
+  h1 { font-size: 1.9rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 0.95rem; }
+  h2 { font-size: 1.15rem; margin: 40px 0 14px; }
+  a { color: var(--accent); }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 8px; }
+  .card {
+    display: block; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; padding: 16px 18px; text-decoration: none; color: inherit;
+    transition: border-color .12s ease, transform .12s ease;
+  }
+  .card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .card strong { display: block; color: var(--accent); margin-bottom: 3px; }
+  .card span { font-size: 0.88rem; color: var(--muted); }
+  ol.lectures { list-style: none; counter-reset: lec; padding: 0; margin: 0; }
+  ol.lectures li {
+    counter-increment: lec; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; margin-bottom: 8px; padding: 12px 16px 12px 48px; position: relative;
+  }
+  ol.lectures li::before {
+    content: counter(lec); position: absolute; left: 14px; top: 12px;
+    color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.85rem;
+  }
+  ol.lectures a { text-decoration: none; font-weight: 600; }
+  ol.lectures a:hover { text-decoration: underline; }
+  .note { color: var(--muted); font-size: 0.9rem; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>AICE2005 — Systematic Design</h1>
+    <div class="sub">University of Southampton · 2025–26 · Lecture materials</div>
+  </header>
+
+  <p>Slide decks, the class timetable, and a linked knowledge base of the core
+  concepts and worked examples used in the module.</p>
+
+  <div class="cards">
+    <a class="card" href="public/TIMETABLE.html">
+      <strong>Timetable →</strong>
+      <span>Week-by-week schedule and rooms</span>
+    </a>
+    <a class="card" href="_knowledge/index.md">
+      <strong>Knowledge base →</strong>
+      <span>Concepts, examples, session outlines</span>
+    </a>
+    <a class="card" href="https://github.com/Dr-AlHashimy/Module_AICE2005_2627">
+      <strong>Repository →</strong>
+      <span>Download everything as a ZIP</span>
+    </a>
+  </div>
+
+  <h2>Week 1 — Introduction</h2>
+  <ol class="lectures">
+    <li><a href="html/COMP-00_Introduction.html">Module introduction</a></li>
+    <li><a href="html/COMP-01_Lecture.html">Introduction to Systematic Design of Multi-Component Systems</a></li>
+    <li><a href="html/COMP-01_Examples.html">Systems Thinking, Systemic Design and Systematic Design</a></li>
+    <li><a href="html/COMP-01_Activity.html">Lab activity: Modular Smart Heating Controller design</a></li>
+    <li><a href="html/COMP-01_Activity_demonstrator.html">Sample completed worksheet</a></li>
+  </ol>
+
+  <h2>Lecture decks</h2>
+  <p class="note">The <a href="public/TIMETABLE.html">timetable</a> is the authoritative running order — numbers below are identifiers, not week numbers.</p>
+  <ol class="lectures">
+    <li><a href="html/COMP-02_Lecture.html">Systems Thinking for AI Engineers</a></li>
+    <li><a href="html/COMP-03_Lecture.html">Functional vs Non-Functional Requirements</a></li>
+    <li><a href="html/COMP-04_Lecture.html">Techniques for Gathering and Validating Requirements</a></li>
+    <li><a href="html/COMP-05_Lecture.html">Use Cases &amp; Personas in Systems Design</a></li>
+    <li><a href="html/COMP-06_Lecture.html">Personas</a></li>
+    <li><a href="html/COMP-07_Lecture.html">System Architecture &amp; Design Patterns</a></li>
+    <li><a href="html/COMP-08_Lecture.html">Block Diagrams &amp; Cross-Domain Interfaces</a></li>
+    <li><a href="html/COMP-09_Lecture.html">Project Management for Multi-Component Systems</a></li>
+    <li><a href="html/COMP-10_Lecture.html">Software Architecture Models: Monolithic, N-Tier, Microservices</a></li>
+    <li><a href="html/COMP-11_Lecture.html">Software Architecture Models — Part 2</a></li>
+    <li><a href="html/COMP-12_Lecture.html">Infrastructure as Code Foundations</a></li>
+    <li><a href="html/COMP-13_Lecture.html">Cloud Architecture Models</a></li>
+    <li><a href="html/COMP-14_Lecture.html">Testing</a></li>
+    <li><a href="html/COMP-15_Lecture.html">Software Architecture Models — Part 4</a></li>
+    <li><a href="html/COMP-18_Lecture.html">Designing, Decomposing, and Delivering Systemic Software</a></li>
+    <li><a href="html/COMP-19_Lecture.html">Risk Management and Technical Debt</a></li>
+    <li><a href="html/COMP-20_Lecture.html">Systems Development Strategies</a></li>
+    <li><a href="html/COMP-21_Lecture.html">Adaptive Coordination for Multi-Component Systems</a></li>
+  </ol>
+
+  <h2>Using the decks</h2>
+  <p class="note">Arrow keys move between slides; press <kbd>F</kbd> for fullscreen.
+  Printable PDF versions, as they are exported, live in
+  <a href="https://github.com/Dr-AlHashimy/Module_AICE2005_2627/tree/main/pdf">pdf/</a>.</p>
+
+  <footer>
+    These files are generated. Corrections and content questions go to the module team.
+  </footer>
+</div>
+</body>
+</html>
