@@ -1,0 +1,107 @@
+% TikZiT figure: SCEMS systemic risk web
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex]
+% Anchors
+\coordinate (CORG) at (-9, 0);
+\coordinate (CTECH) at (  0, 0);
+\coordinate (CSOC) at (  9, 0);
+
+% Technical nodes (center)
+\node[tech] (T2) at ($(CTECH)+(-3,  2.5)$) {Hardware\\Obsolescence};
+\node[tech] (T3) at ($(CTECH)+( 0,  2.5)$) {Data\\Latency};
+\node[tech] (T4) at ($(CTECH)+( 3,  2.5)$) {Cybersecurity\\Breach};
+
+\node[tech] (T1) at ($(CTECH)+(-3,  0)$) {Software\\Reliability};
+\node[tech] (T6) at ($(CTECH)+( 0,  0)$) {Data Integrity\\Issue};
+\node[tech] (T7) at ($(CTECH)+( 3,  0)$) {System Failure\\Rate};
+
+\node[tech] (T5) at ($(CTECH)+( 0, -2.6)$) {AI Algorithm\\Bias};
+
+% Technical boundary
+\node[boundary, fit=(T1)(T2)(T3)(T4)(T5)(T6)(T7), label={[black]above:\SCEMSLabel}] (SCEMS) {};
+
+% Organisational nodes (left)
+\node[org] (O1) at ($(CORG)+(-1.8,  2.8)$) {Supplier\\Dependency};
+\node[org] (O2) at ($(CORG)+( 1.8,  2.8)$) {Communication\\Breakdown};
+
+\node[org] (O5) at ($(CORG)+(-1.8,  0.9)$) {Unclear\\Accountability};
+\node[org] (O6) at ($(CORG)+( 1.8,  0.9)$) {QA Gap\\(Reduced Testing)};
+
+\node[org] (O3) at ($(CORG)+(-1.8, -1.0)$) {Resource Shortage\\(Funding Cuts)};
+\node[org] (O4) at ($(CORG)+( 1.8, -1.0)$) {Decision\\Delay};
+
+\node[org] (O7) at ($(CORG)+(-1.8, -2.9)$) {Technical\\Debt};
+\node[org] (O8) at ($(CORG)+( 1.8, -2.9)$) {Bias Audit\\Process};
+
+% Organisational boundary
+\node[boundary, fit=(O1)(O2)(O3)(O4)(O5)(O6)(O7)(O8)] (ORGBOX) {};
+\node[groupLabel, above=2pt of ORGBOX.north] {Organisational Domain};
+
+% Socio-environmental nodes (right)
+\node[socio] (S5) at ($(CSOC)+( 0,  3.2)$) {Media\\Scrutiny};
+\node[socio] (S4) at ($(CSOC)+( 3,  2.0)$) {Data Privacy\\Concerns};
+\node[socio] (S2) at ($(CSOC)+( 0,  1.2)$) {Regulatory\\Change};
+\node[socio] (S1) at ($(CSOC)+( 0, -0.6)$) {Public\\Trust};
+\node[socio] (S3) at ($(CSOC)+(-3,  2.0)$) {Environmental\\Impact};
+
+% Socio-environmental boundary
+\node[boundary, fit=(S1)(S2)(S3)(S4)(S5)] (SOCBOX) {};
+\node[groupLabel, above=2pt of SOCBOX.north] {Socio-environmental Domain};
+
+% Causal links (Org -> Tech)
+\draw[arrow] (O2) -- (T6);
+\draw[arrow] (O2) -- (T3);
+\draw[arrow] (O3) -- (O6);
+\draw[arrow] (O6) -- (T1);
+\draw[arrow] (O6) -- (T7);
+\draw[arrow] (O5) -- (O2);
+\draw[arrow] (O2) -- (O4);
+\draw[arrow] (O4) -- (T3);
+\draw[arrow] (O1) -- (T2);
+\draw[arrow] (O7) -- (T1);
+\draw[arrow] (O7) -- (T3);
+\draw[arrow] (O7) -- (T4);
+
+% Technical internal propagation
+\draw[arrow] (T2) -- (T3);
+\draw[arrow] (T1) -- (T6);
+\draw[arrow] (T6) -- (T7);
+
+% Technical -> Socio
+\draw[arrow] (T4) -- (S4);
+\draw[arrow] (T4) -- (S2);
+\draw[arrow] (T3) -- (S1);
+\draw[arrow] (T7) -- (S1);
+
+% Socio -> Org and cross
+\draw[arrow] (S5) -- (S2);
+\draw[arrow] (S3) -- (S2);
+\draw[arrow] (S4) -- (S1);
+\draw[arrow] (S2) -- (O4);
+
+% Amplification
+\draw[arrow] (S1) -- (S5);
+\draw[arrow] (O6) -- (T4);
+
+% R1 reinforcing loop
+\draw[arrow, bend left=12] (S1) to node[looplabel, midway, above]{R1} (O3);
+\draw[arrow] (O3) -- (O6);
+\draw[arrow] (O6) -- (T7);
+\draw[arrow, bend left=12] (T7) to (S1);
+
+% B1 balancing loop
+\draw[arrow] (T5) -- (S2);
+\draw[arrow] (S2) -- (O8);
+\draw[arrow, bend left=10] (O8) to node[looplabel, midway, below]{B1} (T5);
+
+% Legend at bottom
+\node[legendbox, anchor=north] (LEG) at ($(CTECH)+(0,-7.2)$) {%
+  \begin{tabular}{ll}
+    \tikz{\node[tech, minimum width=12mm, minimum height=3mm]{};} & Technical domain (blue) \\
+    \tikz{\node[org,  minimum width=12mm, minimum height=3mm]{};} & Organisational domain (orange) \\
+    \tikz{\node[socio,minimum width=12mm, minimum height=3mm]{};} & Socio-environmental domain (green) \\
+    \tikz{\draw[->, line width=0.8pt] (0,0) -- (1.0,0);} & Directed causal influence \\
+    \textbf{R1} & Reinforcing loop (vicious cycle) \\
+    \textbf{B1} & Balancing loop (mitigation/control) \\
+  \end{tabular}
+};
+\end{tikzpicture}

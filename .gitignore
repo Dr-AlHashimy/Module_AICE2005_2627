@@ -1,0 +1,30 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# AICE2005 — student distribution repo
+#
+# This repository publishes ONLY the built lecture outputs and the knowledge
+# base. All authoring source (Markdown slides, theme CSS, Python build tools,
+# Makefile, curriculum YAML, notes) is kept local and never pushed here.
+#
+# Strategy: ignore everything at the repo root, then re-include the four
+# published folders plus this file and the student README.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Ignore every top-level entry …
+/*
+
+# … except:
+!/.gitignore
+!/README.md
+!/_knowledge/
+!/html/
+!/pdf/
+!/public/
+
+# Noise that can appear inside the published folders
+**/.DS_Store
+**/__pycache__/
+**/*.pyc
+**/.obsidian/
+html/.images.stamp
+html/COMP.md
+html/COMP-README.html

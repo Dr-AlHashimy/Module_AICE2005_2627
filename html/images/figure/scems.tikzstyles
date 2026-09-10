@@ -1,0 +1,17 @@
+\tikzstyle{tech}=[draw={rgb,255:red,43; green,108; blue,176}, fill={rgb,255:red,207; green,232; blue,255},
+  rounded corners=2pt, line width=0.6pt, text=black, inner sep=3pt, font=\sffamily\small, align=center]
+
+\tikzstyle{org}=[draw={rgb,255:red,183; green,121; blue,31}, fill={rgb,255:red,255; green,232; blue,194},
+  rounded corners=2pt, line width=0.6pt, text=black, inner sep=3pt, font=\sffamily\small, align=center]
+
+\tikzstyle{socio}=[draw={rgb,255:red,47; green,133; blue,90}, fill={rgb,255:red,198; green,246; blue,213},
+  rounded corners=2pt, line width=0.6pt, text=black, inner sep=3pt, font=\sffamily\small, align=center]
+
+\tikzstyle{boundary}=[draw={rgb,255:red,74; green,85; blue,104}, dashed, rounded corners=6pt, line width=1pt]
+
+\tikzstyle{groupLabel}=[font=\sffamily\bfseries\small, text={rgb,255:red,45; green,55; blue,72}]
+
+\tikzstyle{arrow}=[->, line width=0.8pt]
+\tikzstyle{weak}=[->, line width=0.6pt, dashed]
+\tikzstyle{legendbox}=[draw=black!40, rounded corners=3pt, inner sep=6pt, fill=white]
+\tikzstyle{looplabel}=[fill=white, inner sep=1pt, font=\scriptsize\bfseries]

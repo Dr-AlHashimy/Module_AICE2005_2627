@@ -1,0 +1,15 @@
+%% Architecture trade-off triangles
+graph LR
+    classDef focus fill:#e8f2fb,stroke:#0a5387,stroke-width:2px,rx:18px,ry:18px,color:#0a5387
+    classDef factor fill:#ffffff,stroke:#0a5387,stroke-width:2px,rx:16px,ry:16px,color:#0a5387
+
+    A[Architecture Decision]:::focus --> P(Performance):::factor
+    A --> C(Cost):::factor
+    A --> M(Modularity):::factor
+    A --> I(Integration):::factor
+    A --> S(Standardisation):::factor
+    A --> N(Innovation):::factor
+
+    P -. trade-off .- C
+    M -. tension .- I
+    S -. balance .- N

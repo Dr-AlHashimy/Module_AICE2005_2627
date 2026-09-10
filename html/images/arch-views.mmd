@@ -1,0 +1,11 @@
+%% Architectural views overview
+flowchart LR
+    classDef view fill:#e8f2fb,stroke:#0a5387,stroke-width:2px,rx:20px,ry:20px,color:#0a5387
+    A[System Architecture]:::view --> L[Logical View]:::view
+    A --> P[Physical View]:::view
+    A --> R[Process View]:::view
+    A --> D[Development View]:::view
+    L -->|What functions?| L1[Responsibilities]
+    P -->|Where it runs?| P1[Hardware & Network]
+    R -->|How it executes?| R1[Concurrency]
+    D -->|How it evolves?| D1[Repos & Builds]

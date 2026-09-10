@@ -1,0 +1,15 @@
+%% Robotic arm modular architecture with coordination
+flowchart LR
+    classDef module fill:#e8f2fb,stroke:#0a5387,stroke-width:2px,rx:18px,ry:18px,color:#0a5387
+    classDef coord fill:#ffffff,stroke:#0a5387,stroke-dasharray:6 4,rx:16px,ry:16px,color:#0a5387
+
+    System[[Robotic Arm System]]:::coord --> Joint1(Joint Module 1):::module
+    System --> Joint2(Joint Module 2):::module
+    System --> Joint3(Joint Module 3):::module
+    Joint1 -->|Surrogate constraints| Coordinator{{Shared Constraint Hub}}:::coord
+    Joint2 -->|Surrogate constraints| Coordinator
+    Joint3 -->|Surrogate constraints| Coordinator
+    Coordinator --> Control(Control Software):::module
+
+    Control --> Telemetry[Telemetry & Feedback Loop]:::coord
+    Telemetry --> Coordinator
