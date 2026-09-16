@@ -1,19 +1,113 @@
-<table border="1" cellspacing="0" cellpadding="6">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AICE2005 — Timetable</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #1a1d21;
+    --muted: #5a6470;
+    --border: #e2e6ea;
+    --accent: #005c84;
+    --accent-text: #ffffff;
+    --stripe: #f2f5f7;
+    --holiday-bg: #fdf3e2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --surface: #1d2125;
+      --text: #e8eaed;
+      --muted: #9aa4b0;
+      --border: #2c3237;
+      --accent: #4aa3c9;
+      --accent-text: #0b1114;
+      --stripe: #21262b;
+      --holiday-bg: #2c2416;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: clamp(20px, 4vw, 48px) clamp(14px, 3vw, 32px) 64px; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 16px; margin-bottom: 24px; }
+  h1 { font-size: clamp(1.3rem, 1rem + 1.2vw, 1.9rem); margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 0.95rem; }
+  .note { color: var(--muted); font-size: 0.85rem; margin: 0 0 20px; }
+  .back { display: inline-block; margin-bottom: 14px; color: var(--accent); font-size: 0.85rem; text-decoration: none; }
+  .back:hover { text-decoration: underline; }
+
+  .table-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+  }
+  table {
+    width: 100%;
+    min-width: 720px;
+    border-collapse: collapse;
+    font-size: clamp(0.72rem, 0.6rem + 0.35vw, 0.95rem);
+  }
+  caption { caption-side: top; text-align: left; padding: 4px 0 10px; color: var(--muted); }
+  th, td {
+    padding: clamp(6px, 1vw, 12px) clamp(8px, 1.4vw, 16px);
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    white-space: normal;
+  }
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--accent);
+    color: var(--accent-text);
+    font-weight: 600;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  tbody tr:nth-child(even) { background: var(--stripe); }
+  tbody tr:hover { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
+  tbody tr.holiday { background: var(--holiday-bg); font-style: italic; color: var(--muted); }
+  tbody tr.holiday:hover { background: var(--holiday-bg); }
+  td:first-child, th:first-child { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  td:nth-child(2), th:nth-child(2) { font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../index.html">&larr; Back to module page</a>
+  <header>
+    <h1>AICE2005 — Timetable</h1>
+    <div class="sub">University of Southampton · Systematic Design · 2026–27</div>
+  </header>
+  <p class="note">Lecturers: Salehi Fathabadi, Asieh · Fadhel, Nawfal.</p>
+  <div class="table-wrap">
+<table>
   <thead>
     <tr>
       <th>Week</th>
       <th>Starting</th>
       <th>Topic</th>
-      <th>Lecture on Tues 10:00 (07/3027, L/R F1)</th>
-      <th>Lecture on Tues 17:00 (06/1081, L/R B)</th>
-      <th>Workshop on Wed 10:00-13:00 (07/3027, L/R F1)</th>
-      <th>Lecture on Thurs 17:00 (13/3021)</th>
+      <th>Tues 09:00 (35/1005)</th>
+      <th>Tues 17:00 (35/1005)</th>
+      <th>Wed 09:00-12:00 (02/1039)</th>
+      <th>Thurs 14:00 (02/1039)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>1</td>
-      <td>29/09/25</td>
+      <td>21/09/26</td>
       <td>Introduction to Systematic Design</td>
       <td>L1.1</td>
       <td>L1.2</td>
@@ -22,7 +116,7 @@
     </tr>
     <tr>
       <td>2</td>
-      <td>06/10/25</td>
+      <td>28/09/26</td>
       <td>Hands-On: Advanced Source Control</td>
       <td>L2.1</td>
       <td>L2.2</td>
@@ -31,7 +125,7 @@
     </tr>
     <tr>
       <td>3</td>
-      <td>13/10/25</td>
+      <td>05/10/26</td>
       <td>Hands-On: Build Systems &amp; Continuous Integration</td>
       <td>L3.1</td>
       <td>L3.2</td>
@@ -40,7 +134,7 @@
     </tr>
     <tr>
       <td>4</td>
-      <td>20/10/25</td>
+      <td>12/10/26</td>
       <td>Analysing Systems I — Requirements</td>
       <td>L4.1</td>
       <td>L4.2</td>
@@ -49,7 +143,7 @@
     </tr>
     <tr>
       <td>5</td>
-      <td>27/10/25</td>
+      <td>19/10/26</td>
       <td>Analysing Systems II — Requirements Gathering</td>
       <td>L5.1</td>
       <td>L5.2</td>
@@ -58,7 +152,7 @@
     </tr>
     <tr>
       <td>6</td>
-      <td>03/11/25</td>
+      <td>26/10/26</td>
       <td>Analysing Systems III — System Architecture</td>
       <td>L6.1</td>
       <td>L6.2</td>
@@ -67,7 +161,7 @@
     </tr>
     <tr>
       <td>7</td>
-      <td>10/11/25</td>
+      <td>02/11/26</td>
       <td>Designing Systems I — Decomposition</td>
       <td>L7.1</td>
       <td>L7.2</td>
@@ -76,7 +170,7 @@
     </tr>
     <tr>
       <td>8</td>
-      <td>17/11/25</td>
+      <td>09/11/26</td>
       <td>Designing Systems II — Interfaces &amp; APIs</td>
       <td>L8.1</td>
       <td>L8.2</td>
@@ -85,7 +179,7 @@
     </tr>
     <tr>
       <td>9</td>
-      <td>24/11/25</td>
+      <td>16/11/26</td>
       <td>Designing Systems III — Integration &amp; Formal Specification</td>
       <td>L9.1</td>
       <td>L9.2</td>
@@ -94,7 +188,7 @@
     </tr>
     <tr>
       <td>10</td>
-      <td>01/12/25</td>
+      <td>23/11/26</td>
       <td>Testing Systems — HW/SW/Network Testing &amp; Verification</td>
       <td>L10.1</td>
       <td>L10.2</td>
@@ -103,7 +197,7 @@
     </tr>
     <tr>
       <td>11</td>
-      <td>08/12/25</td>
+      <td>30/11/26</td>
       <td>Managing Development — Methodologies &amp; Project Management</td>
       <td>L11.1</td>
       <td>L11.2</td>
@@ -111,14 +205,8 @@
       <td>L11.3</td>
     </tr>
     <tr>
-      <td>12-14</td>
-      <td></td>
-      <td></td>
-      <td colspan="4">Christmas / Term Break</td>
-    </tr>
-    <tr>
-      <td>15</td>
-      <td>05/01/26</td>
+      <td>12</td>
+      <td>07/12/26</td>
       <td>Recap &amp; Bridge to Group Project</td>
       <td>L12.1</td>
       <td>L12.2</td>
@@ -127,3 +215,8 @@
     </tr>
   </tbody>
 </table>
+  </div>
+  <footer>Generated from data/timetable.yaml — run &ldquo;make timetable&rdquo; to rebuild after edits.</footer>
+</div>
+</body>
+</html>
