@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Week 9 — AICE2005</title>
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --text: #1a1d21;
+    --muted: #5a6470;
+    --border: #e2e6ea;
+    --accent: #005c84;
+    --accent-text: #ffffff;
+    --placeholder-bg: #f2f5f7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171a;
+      --surface: #1d2125;
+      --text: #e8eaed;
+      --muted: #9aa4b0;
+      --border: #2c3237;
+      --accent: #4aa3c9;
+      --accent-text: #0b1114;
+      --placeholder-bg: #21262b;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 48px 20px 80px; }
+  header { border-bottom: 3px solid var(--accent); padding-bottom: 20px; margin-bottom: 28px; }
+  h1 { font-size: 1.7rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .sub { color: var(--muted); font-size: 0.95rem; }
+  h2 { font-size: 1.05rem; margin: 32px 0 12px; }
+  .sessions { display: grid; gap: 10px; }
+  .session {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 14px 16px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  }
+  .session .slot { font-weight: 600; }
+  .session .slot small { display: block; font-weight: 400; color: var(--muted); font-size: 0.82rem; margin-top: 2px; }
+  .placeholder {
+    color: var(--muted); font-size: 0.85rem; background: var(--placeholder-bg);
+    border-radius: 6px; padding: 4px 10px; white-space: nowrap;
+  }
+  nav.weeknav { display: flex; justify-content: space-between; margin-top: 40px; font-size: 0.9rem; }
+  nav.weeknav a { color: var(--accent); text-decoration: none; }
+  nav.weeknav a:hover { text-decoration: underline; }
+  nav.weeknav span { color: var(--border); }
+  footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Week 9 — Designing Systems III — Integration & Formal Specification</h1>
+    <div class="sub">w/c 16/11/26 · <a href="../public/TIMETABLE.html">full timetable</a></div>
+  </header>
+
+  <h2>Sessions</h2>
+  <div class="sessions">
+    <div class="session">
+      <div class="slot">Tues 09:00 · 35/1005<small>L9.1</small></div>
+      <div class="placeholder">Materials to be added</div>
+    </div>
+    <div class="session">
+      <div class="slot">Tues 17:00 · 35/1005<small>L9.2</small></div>
+      <div class="placeholder">Materials to be added</div>
+    </div>
+    <div class="session">
+      <div class="slot">Wed 09:00–12:00 · 02/1039 (Workshop)<small>W9</small></div>
+      <div class="placeholder">Materials to be added</div>
+    </div>
+    <div class="session">
+      <div class="slot">Thurs 14:00 · 02/1039<small>L9.3</small></div>
+      <div class="placeholder">Materials to be added</div>
+    </div>
+  </div>
+
+  <nav class="weeknav">
+    <a href="week-08.html">&larr; Week 8</a>
+    <a href="week-10.html">Week 10 &rarr;</a>
+  </nav>
+
+  <footer>
+    Materials for this week are added as they become available. Corrections and content questions go to the module team.
+  </footer>
+</div>
+</body>
+</html>

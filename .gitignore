@@ -21,6 +21,7 @@
 !/html/
 !/pdf/
 !/public/
+!/weeks/
 
 # Noise that can appear inside the published folders
 **/.DS_Store

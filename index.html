@@ -47,17 +47,16 @@
   .card:hover { border-color: var(--accent); transform: translateY(-2px); }
   .card strong { display: block; color: var(--accent); margin-bottom: 3px; }
   .card span { font-size: 0.88rem; color: var(--muted); }
-  ol.lectures { list-style: none; counter-reset: lec; padding: 0; margin: 0; }
-  ol.lectures li {
-    counter-increment: lec; background: var(--surface); border: 1px solid var(--border);
-    border-radius: 8px; margin-bottom: 8px; padding: 12px 16px 12px 48px; position: relative;
+  .weeks { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 8px; }
+  .week-card {
+    display: block; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: 14px 16px; text-decoration: none; color: inherit;
+    transition: border-color .12s ease, transform .12s ease;
   }
-  ol.lectures li::before {
-    content: counter(lec); position: absolute; left: 14px; top: 12px;
-    color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.85rem;
-  }
-  ol.lectures a { text-decoration: none; font-weight: 600; }
-  ol.lectures a:hover { text-decoration: underline; }
+  .week-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+  .week-card .num { font-size: 0.78rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.04em; }
+  .week-card .topic { display: block; font-weight: 600; margin: 3px 0 4px; text-decoration: none; }
+  .week-card .date { font-size: 0.82rem; color: var(--muted); }
   .note { color: var(--muted); font-size: 0.9rem; }
   footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.85rem; }
 </style>
@@ -69,8 +68,8 @@
     <div class="sub">University of Southampton · 2026–27 · Lecture materials</div>
   </header>
 
-  <p>Slide decks, the class timetable, and a linked knowledge base of the core
-  concepts and worked examples used in the module.</p>
+  <p>The class timetable and a linked knowledge base of the core concepts and
+  worked examples used in the module. Lecture materials are organised by week below.</p>
 
   <div class="cards">
     <a class="card" href="public/TIMETABLE.html">
@@ -87,37 +86,22 @@
     </a>
   </div>
 
-  <h2>Week 1 — Introduction</h2>
-  <ol class="lectures">
-    <li><a href="html/COMP-00_Introduction.html">Module introduction</a></li>
-    <li><a href="html/COMP-01_Lecture.html">Introduction to Systematic Design of Multi-Component Systems</a></li>
-    <li><a href="html/COMP-01_Examples.html">Systems Thinking, Systemic Design and Systematic Design</a></li>
-    <li><a href="html/COMP-01_Activity.html">Lab activity: Modular Smart Heating Controller design</a></li>
-    <li><a href="html/COMP-01_Activity_demonstrator.html">Sample completed worksheet</a></li>
-  </ol>
-
-  <h2>Lecture decks</h2>
-  <p class="note">The <a href="public/TIMETABLE.html">timetable</a> is the authoritative running order — numbers below are identifiers, not week numbers.</p>
-  <ol class="lectures">
-    <li><a href="html/COMP-02_Lecture.html">Systems Thinking for AI Engineers</a></li>
-    <li><a href="html/COMP-03_Lecture.html">Functional vs Non-Functional Requirements</a></li>
-    <li><a href="html/COMP-04_Lecture.html">Techniques for Gathering and Validating Requirements</a></li>
-    <li><a href="html/COMP-05_Lecture.html">Use Cases &amp; Personas in Systems Design</a></li>
-    <li><a href="html/COMP-06_Lecture.html">Personas</a></li>
-    <li><a href="html/COMP-07_Lecture.html">System Architecture &amp; Design Patterns</a></li>
-    <li><a href="html/COMP-08_Lecture.html">Block Diagrams &amp; Cross-Domain Interfaces</a></li>
-    <li><a href="html/COMP-09_Lecture.html">Project Management for Multi-Component Systems</a></li>
-    <li><a href="html/COMP-10_Lecture.html">Software Architecture Models: Monolithic, N-Tier, Microservices</a></li>
-    <li><a href="html/COMP-11_Lecture.html">Software Architecture Models — Part 2</a></li>
-    <li><a href="html/COMP-12_Lecture.html">Infrastructure as Code Foundations</a></li>
-    <li><a href="html/COMP-13_Lecture.html">Cloud Architecture Models</a></li>
-    <li><a href="html/COMP-14_Lecture.html">Testing</a></li>
-    <li><a href="html/COMP-15_Lecture.html">Software Architecture Models — Part 4</a></li>
-    <li><a href="html/COMP-18_Lecture.html">Designing, Decomposing, and Delivering Systemic Software</a></li>
-    <li><a href="html/COMP-19_Lecture.html">Risk Management and Technical Debt</a></li>
-    <li><a href="html/COMP-20_Lecture.html">Systems Development Strategies</a></li>
-    <li><a href="html/COMP-21_Lecture.html">Adaptive Coordination for Multi-Component Systems</a></li>
-  </ol>
+  <h2>Weeks</h2>
+  <p class="note">Each week page lists that week's sessions and materials as they become available.</p>
+  <div class="weeks">
+    <a class="week-card" href="weeks/week-01.html"><span class="num">Week 1</span><span class="topic">Introduction to Systematic Design</span><span class="date">w/c 21/09/26</span></a>
+    <a class="week-card" href="weeks/week-02.html"><span class="num">Week 2</span><span class="topic">Hands-On: Advanced Source Control</span><span class="date">w/c 28/09/26</span></a>
+    <a class="week-card" href="weeks/week-03.html"><span class="num">Week 3</span><span class="topic">Hands-On: Build Systems &amp; Continuous Integration</span><span class="date">w/c 05/10/26</span></a>
+    <a class="week-card" href="weeks/week-04.html"><span class="num">Week 4</span><span class="topic">Analysing Systems I — Requirements</span><span class="date">w/c 12/10/26</span></a>
+    <a class="week-card" href="weeks/week-05.html"><span class="num">Week 5</span><span class="topic">Analysing Systems II — Requirements Gathering</span><span class="date">w/c 19/10/26</span></a>
+    <a class="week-card" href="weeks/week-06.html"><span class="num">Week 6</span><span class="topic">Analysing Systems III — System Architecture</span><span class="date">w/c 26/10/26</span></a>
+    <a class="week-card" href="weeks/week-07.html"><span class="num">Week 7</span><span class="topic">Designing Systems I — Decomposition</span><span class="date">w/c 02/11/26</span></a>
+    <a class="week-card" href="weeks/week-08.html"><span class="num">Week 8</span><span class="topic">Designing Systems II — Interfaces &amp; APIs</span><span class="date">w/c 09/11/26</span></a>
+    <a class="week-card" href="weeks/week-09.html"><span class="num">Week 9</span><span class="topic">Designing Systems III — Integration &amp; Formal Specification</span><span class="date">w/c 16/11/26</span></a>
+    <a class="week-card" href="weeks/week-10.html"><span class="num">Week 10</span><span class="topic">Testing Systems — HW/SW/Network Testing &amp; Verification</span><span class="date">w/c 23/11/26</span></a>
+    <a class="week-card" href="weeks/week-11.html"><span class="num">Week 11</span><span class="topic">Managing Development — Methodologies &amp; Project Management</span><span class="date">w/c 30/11/26</span></a>
+    <a class="week-card" href="weeks/week-12.html"><span class="num">Week 12</span><span class="topic">Recap &amp; Bridge to Group Project</span><span class="date">w/c 07/12/26</span></a>
+  </div>
 
   <h2>Using the decks</h2>
   <p class="note">Arrow keys move between slides; press <kbd>F</kbd> for fullscreen.
