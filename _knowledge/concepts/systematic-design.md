@@ -7,6 +7,7 @@ sessions: [1]
 aims: []
 prerequisites: []
 related: [systemic-design, systems-thinking, systematic-design-principles, monolithic-design, distributed-design]
+examples: [social-media-algorithm-feedback]
 ---
 
 # Systematic Design
@@ -23,7 +24,7 @@ Systematic Design is a structured approach that decomposes systems into interact
 
 Systematic design is crucial for managing complexity, coordinating distributed teams, and ensuring that each subsystem contributes effectively to the global performance objectives. It is not simply a way to document a design process.  
 
-## Key characteristics:
+### Key Characteristics
 
 - Emphasises phased processes (e.g., requirements → architecture → implementation → testing)
 - Often used in engineering and software development (e.g., V-model, waterfall models, MBSE)
@@ -48,7 +49,7 @@ Systematic design stands in contrast to ad hoc design approaches, which rely hea
 
 In multi-component systems, systematic design becomes essential due to the exponential growth in complexity with each additional component.
 
-## Key Principles of Systematic Design
+### Key Principles of Systematic Design
 
 | **Principle**                                     | **Description**                                                                                    |
 | ------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
@@ -63,7 +64,18 @@ In multi-component systems, systematic design becomes essential due to the expon
 | **Design for Lifecycle Considerations**           | Consider manufacturability, maintainability, and sustainability from the start.                    |
 | **Use of Formal Tools and Models**                | Apply CAD, SysML, simulation, and modelling tools to support rigour, precision, and communication. |
 
+### Worked Example: A Systematic Redesign Process
 
+Continuing the same scenario as [[systemic-design]]'s worked example, a systematic approach to redesigning a recommender system looks like an ordered checklist:
+
+1. Audit the current recommendation algorithm
+2. Design a new weighting scheme
+3. Build A/B test infrastructure
+4. Run tests on 10% of users
+5. Measure engagement metrics
+6. Roll out to 100% if metrics improve
+
+Each step is methodical and auditable — but, taken alone, isolated: step 1 doesn't show how it affects step 4, or how improving one metric breaks another part of the system. That's the gap [[systemic-design]] closes.
 
 ## Why it matters
 
@@ -76,6 +88,10 @@ In multi-component systems, systematic design becomes essential due to the expon
 - [[systematic-design-principles]]
 - [[monolithic-design]]
 - [[distributed-design]]
+
+## Examples
+
+- [[social-media-algorithm-feedback|Social Media Algorithm: Feedback Loops and Emergent Behaviour]]
 
 ## Covered in sessions
 

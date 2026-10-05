@@ -7,6 +7,7 @@ sessions: [1]
 aims: []
 prerequisites: [systems-thinking]
 related: [systems-thinking, systematic-design]
+examples: [social-media-algorithm-feedback]
 ---
 
 # Systemic Design
@@ -22,9 +23,7 @@ Key characteristics:
 - Focused on sense-making and co-creation in messy, real-world contexts
 - Often applied to sustainability, healthcare, policy, education, and ecosystems
 
----
-
-# Systemic Design Principles
+### Systemic Design Principles
 
 A common systemic design mindset includes:
 
@@ -35,6 +34,18 @@ A common systemic design mindset includes:
 
 These mindsets are increasingly important as engineers face challenges that are not purely technical but socio-technical, requiring both human and machine systems to work harmoniously. 
 
+### Worked Example: Redesigning a Recommender System
+
+Where [[systems-thinking]] *diagnoses* the algorithm/user feedback loop that produces filter bubbles (see [[social-media-algorithm-feedback]]), systemic design *redesigns the whole system*, not just the algorithm:
+
+- Change recommendation weights to penalise extreme content
+- Redesign the UI to surface opposing viewpoints and trigger reflection
+- Change creator incentives from engagement-maximisation to quality
+- Add circuit breakers that inject diverse content when a feed becomes too homogeneous
+- Monitor for emergent polarisation across the whole platform
+
+These interventions only work *together*: changing the algorithm without changing incentives still lets creators game the system; showing opposing views without changing the algorithm gets them ignored. Systemic design means designing across the system, not one component at a time — see [[systematic-design]] for how the same scenario looks run as a phased process instead.
+
 ## Why it matters
 
 <!-- Add context: why does this concept matter for a PhD researcher? -->
@@ -43,6 +54,10 @@ These mindsets are increasingly important as engineers face challenges that are 
 
 - [[systems-thinking]]
 - [[systematic-design]]
+
+## Examples
+
+- [[social-media-algorithm-feedback|Social Media Algorithm: Feedback Loops and Emergent Behaviour]]
 
 ## Covered in sessions
 
