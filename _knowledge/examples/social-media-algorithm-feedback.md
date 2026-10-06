@@ -9,7 +9,7 @@ sessions: [1]
 
 # Social Media Algorithm: Feedback Loops and Emergent Behaviour
 
-## The System
+## Social Media Algorithm Example
 
 A social media platform contains three coupled components:
 
@@ -49,6 +49,33 @@ Solutions require systems thinking:
 - Add negative feedback (e.g., expose users to opposing views, but measure actual engagement changes)
 - Change incentive structures across the entire platform, not just the algorithm
 - Monitor emergent behaviours, not just algorithm metrics
+
+### Worked Example: A Systemic Redesign Process
+
+Where systems-thinking *diagnoses* the algorithm/user feedback loop that produces filter bubbles , systemic design *redesigns the whole system*, not just the algorithm:
+
+- Change recommendation weights to penalise extreme content
+- Redesign the UI to surface opposing viewpoints and trigger reflection
+- Change creator incentives from engagement-maximisation to quality
+- Add circuit breakers that inject diverse content when a feed becomes too homogeneous
+- Monitor for emergent polarisation across the whole platform
+
+These interventions only work *together*: changing the algorithm without changing incentives still lets creators game the system; showing opposing views without changing the algorithm gets them ignored. Systemic design means designing across the system, not one component at a time —  systematic-design for how the same scenario looks run as a phased process instead.
+
+
+### Worked Example: A Systematic Redesign Process
+
+Continuing the same scenario as systemic-design's worked example, a systematic approach to redesigning a recommender system looks like an ordered checklist:
+
+1. Audit the current recommendation algorithm
+2. Design a new weighting scheme
+3. Build A/B test infrastructure
+4. Run tests on 10% of users
+5. Measure engagement metrics
+6. Roll out to 100% if metrics improve
+
+Each step is methodical and auditable — but, taken alone, isolated: step 1 doesn't show how it affects step 4, or how improving one metric breaks another part of the system. That's the gap systemic-design closes.
+
 
 ## Related Concepts
 

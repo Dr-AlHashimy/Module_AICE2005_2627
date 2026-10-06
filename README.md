@@ -72,11 +72,18 @@ just identifiers, not week numbers. Some weeks have more than one deck.
 | [`COMP-01_Activity.html`](html/COMP-01_Activity.html) | Lab activity: Modular Smart Heating Controller design |
 | [`COMP-01_Activity_demonstrator.html`](html/COMP-01_Activity_demonstrator.html) | Sample completed worksheet |
 
+### Week 3 — Systems Thinking, Systematic Design & Problem Solving
+
+| File | Topic |
+|---|---|
+| [`COMP-_L3.1_Lecture.html`](html/COMP-_L3.1_Lecture.html) | Systems Thinking for AI Engineers |
+| [`COMP-_L3.2_Lecture.html`](html/COMP-_L3.2_Lecture.html) | Introduction to Systematic Design of Multi-Component Systems |
+| [`COMP-_L3.3_Lecture.html`](html/COMP-_L3.3_Lecture.html) | Problem Solving: From Fire-Fighting to Systematic Practice |
+
 ### Lecture decks
 
 | File | Topic |
 |---|---|
-| [`COMP-02_Lecture.html`](html/COMP-02_Lecture.html) | Systems Thinking for AI Engineers |
 | [`COMP-03_Lecture.html`](html/COMP-03_Lecture.html) | Functional vs Non-Functional Requirements |
 | [`COMP-04_Lecture.html`](html/COMP-04_Lecture.html) | Techniques for Gathering and Validating Requirements |
 | [`COMP-05_Lecture.html`](html/COMP-05_Lecture.html) | Use Cases & Personas in Systems Design |

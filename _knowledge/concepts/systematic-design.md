@@ -35,9 +35,11 @@ It stands in contrast to systemic design and systems thinking, which emphasise i
 
 In multi-component systems, systematic design becomes essential because complexity grows exponentially with each additional component, and it draws on the practical toolkit captured in "Systematic Design Principles" and the monolithic vs distributed design choice for how the resulting process is coordinated.
 
-Where systematic design is process-oriented and phased, systemic design is relationship-oriented and participatory, making it the bridge between systems thinking (the analytical lens) and the structured discipline of systematic design (the delivery process).
+### Where systematic design is process-oriented and phased, systemic design is relationship-oriented and participatory, making it the bridge between systems thinking (the analytical lens) and the structured discipline of systematic design (the delivery process).
 
-It is a foundational approach that ensures: 
+
+
+### It is a foundational approach that ensures: 
 
 1. Reliability
 2. Scalability
@@ -51,6 +53,8 @@ In multi-component systems, systematic design becomes essential due to the expon
 
 ### Key Principles of Systematic Design
 
+<!-- _class: table -->
+
 | **Principle**                                     | **Description**                                                                                    |
 | ------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | **Structured Process Orientation**                | Follow a defined, repeatable sequence of design stages to ensure clarity and consistency.          |
@@ -63,19 +67,6 @@ In multi-component systems, systematic design becomes essential due to the expon
 | **Documentation and Knowledge Management**        | Maintain thorough records of decisions, risks, trade-offs, and changes throughout the process.     |
 | **Design for Lifecycle Considerations**           | Consider manufacturability, maintainability, and sustainability from the start.                    |
 | **Use of Formal Tools and Models**                | Apply CAD, SysML, simulation, and modelling tools to support rigour, precision, and communication. |
-
-### Worked Example: A Systematic Redesign Process
-
-Continuing the same scenario as [[systemic-design]]'s worked example, a systematic approach to redesigning a recommender system looks like an ordered checklist:
-
-1. Audit the current recommendation algorithm
-2. Design a new weighting scheme
-3. Build A/B test infrastructure
-4. Run tests on 10% of users
-5. Measure engagement metrics
-6. Roll out to 100% if metrics improve
-
-Each step is methodical and auditable — but, taken alone, isolated: step 1 doesn't show how it affects step 4, or how improving one metric breaks another part of the system. That's the gap [[systemic-design]] closes.
 
 ## Why it matters
 
